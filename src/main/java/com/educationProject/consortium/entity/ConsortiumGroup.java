@@ -1,5 +1,6 @@
 package com.educationProject.consortium.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import jakarta.persistence.Entity;
@@ -12,8 +13,10 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class ConsortiumGroup {
+public class ConsortiumGroup implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

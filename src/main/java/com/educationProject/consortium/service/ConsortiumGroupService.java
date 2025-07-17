@@ -3,6 +3,7 @@ package com.educationProject.consortium.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.educationProject.consortium.dto.ConsortiumGroupRequestDTO;
@@ -26,6 +27,7 @@ public class ConsortiumGroupService {
 		return repository.findAll().stream().map(ConsortiumGroupMapper::toDTO).toList();
 	}
 	
+	@Cacheable(value = "consortiumGroup", key="#id")
 	public ConsortiumGroupResponseDTO listById(long id) {
 		ConsortiumGroup c = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Consortium Group not found."));
 		return ConsortiumGroupMapper.toDTO(c);

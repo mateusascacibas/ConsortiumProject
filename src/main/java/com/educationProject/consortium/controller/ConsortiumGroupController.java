@@ -18,6 +18,8 @@ import com.educationProject.consortium.dto.ConsortiumGroupRequestDTO;
 import com.educationProject.consortium.dto.ConsortiumGroupResponseDTO;
 import com.educationProject.consortium.service.ConsortiumGroupService;
 
+import io.swagger.v3.oas.annotations.Operation;
+
 @RestController
 @RequestMapping("/consortiumGroup/")
 public class ConsortiumGroupController {
@@ -25,6 +27,7 @@ public class ConsortiumGroupController {
 	@Autowired
 	private ConsortiumGroupService service;
 	
+	@Operation(summary = "Create new  consortium group", description = "Create an consortium group with received informations")
 	@PostMapping("create")
 	public ResponseEntity<String> create(@RequestBody ConsortiumGroupRequestDTO dto){
 		ConsortiumGroupResponseDTO response = service.create(dto);
@@ -32,11 +35,13 @@ public class ConsortiumGroupController {
 		return ResponseEntity.created(location).body("Consortium created with success -> " + response);
 	}
 	
+	@Operation(summary = "List all consortium groups", description = "List all consortium groups")
 	@GetMapping("/listAll")
 	public List<ConsortiumGroupResponseDTO> listAll(){
 		return service.listAll();
 	}
 	
+	@Operation(summary = "List an consortium group", description = "List an consortium group by received ID")
 	@GetMapping("/{id}")
 	public ConsortiumGroupResponseDTO listById(@PathVariable long id) {
 		return service.listById(id);
