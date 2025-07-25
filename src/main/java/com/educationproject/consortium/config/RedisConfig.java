@@ -31,11 +31,19 @@ public class RedisConfig {
     }
 
     @Bean
-    public RedisTemplate<String, ConsortiumGroup> redisTemplate(RedisConnectionFactory connectionFactory) {
-        RedisTemplate<String, ConsortiumGroup> template = new RedisTemplate<>();
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(connectionFactory);
+
+        template.setKeySerializer(new org.springframework.data.redis.serializer.StringRedisSerializer());
+        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        template.setHashKeySerializer(new org.springframework.data.redis.serializer.StringRedisSerializer());
+        template.setHashValueSerializer(new GenericJackson2JsonRedisSerializer());
+
+        template.afterPropertiesSet();
         return template;
     }
+
 }
 
 	
