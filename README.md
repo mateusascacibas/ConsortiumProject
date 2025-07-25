@@ -116,17 +116,11 @@ docker-compose up -d
 
 ---
 
-## 🔮 Próximos Passos
-
--
-
----
-
 ## 👥 Autor
 
 **Mateus Ascacibas da Silva**\
 Desenvolvedor Backend Java\
-[LinkedIn](https://www.linkedin.com/in/mateusascacibas/) | [GitHub](https://github.com/mateusascacibas)
+[LinkedIn](https://www.linkedin.com/in/mateus-ascacibas/) | [GitHub](https://github.com/mateusascacibas)
 
 ---
 
