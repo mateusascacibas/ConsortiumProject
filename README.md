@@ -116,12 +116,6 @@ docker-compose up -d
 
 ---
 
-## 🔮 Próximos Passos
-
--
-
----
-
 ## 👥 Autor
 
 **Mateus Ascacibas da Silva**\
