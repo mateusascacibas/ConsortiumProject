@@ -1,4 +1,4 @@
-package com.educationproject.consortium.exception;
+package com.educationproject.consortium.repository;
 
 import java.util.Optional;
 

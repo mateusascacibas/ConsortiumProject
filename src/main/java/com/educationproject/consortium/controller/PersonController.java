@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.educationproject.consortium.dto.PersonRequestDTO;
 import com.educationproject.consortium.dto.PersonResponseDTO;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,15 +17,15 @@ import com.educationproject.consortium.service.PersonService;
 @RequestMapping("/person")
 public class PersonController {
 
-	@Autowired
-	private PersonService service;
-	
 	@PostMapping("")
-	public ResponseEntity<String> create(@RequestBody PersonRequestDTO dto){
+	public ResponseEntity<String> create(@RequestBody @Valid PersonRequestDTO dto){
 		PersonResponseDTO person = service.createPerson(dto);
 		return ResponseEntity.created(URI.create("/person/"+person.id())).body("Person created with success -> " + person);
 	}
-	
+
+	@Autowired
+	private PersonService service;
+
 	@GetMapping("")
 	public ResponseEntity<List<PersonResponseDTO>> listAll(){
 		List<PersonResponseDTO> list = service.listAll();

@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.educationproject.consortium.dto.PersonRequestDTO;
 import com.educationproject.consortium.dto.PersonResponseDTO;
+import com.educationproject.consortium.exception.PersonNotFoundException;
 import com.educationproject.consortium.mapper.PersonMapper;
 import org.springframework.stereotype.Service;
 
@@ -30,7 +31,7 @@ public class PersonService {
 
     public PersonResponseDTO findById(String id) {
         Person person = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Person not found with id: " + id));
+                .orElseThrow(() -> new PersonNotFoundException(id));
         return PersonMapper.toResponseDTO(person);
     }
 
@@ -44,7 +45,7 @@ public class PersonService {
 
     public PersonResponseDTO updatePerson(PersonRequestDTO dto, String id) {
         Person existingPerson = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Person not found with id: " + id));
+                .orElseThrow(() -> new PersonNotFoundException(id));
 
         existingPerson.setName(dto.name());
         existingPerson.setAge(dto.age());
@@ -56,7 +57,7 @@ public class PersonService {
 
     public void deletePerson(String id) {
         Person existingPerson = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Person not found with id: " + id));
+                .orElseThrow(() -> new PersonNotFoundException(id));
         repository.delete(existingPerson);
     }
 

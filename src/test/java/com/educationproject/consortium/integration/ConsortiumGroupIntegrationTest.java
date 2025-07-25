@@ -1,5 +1,6 @@
 package com.educationproject.consortium.integration;
 
+import com.educationproject.consortium.producer.ConsortiumGroupProducer;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -7,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.annotation.DirtiesContext;
 
 import static org.hamcrest.Matchers.*;
@@ -14,6 +16,7 @@ import static org.hamcrest.Matchers.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class ConsortiumGroupIntegrationTest {
+
 
     @LocalServerPort
     private int port;
@@ -29,37 +32,37 @@ public class ConsortiumGroupIntegrationTest {
 
     private void createUser() {
         String userJson = """
-            {
-                "username": "integrationUser",
-                "password": "123456"
-            }
-        """;
+                    {
+                        "username": "integrationUser",
+                        "password": "123456"
+                    }
+                """;
 
         RestAssured
-            .given()
+                .given()
                 .contentType(ContentType.JSON)
                 .body(userJson)
-            .when()
+                .when()
                 .post("/user/create")
-            .then()
+                .then()
                 .statusCode(200);
     }
 
     private String loginAndGetToken() {
         String loginJson = """
-            {
-                "username": "integrationUser",
-                "password": "123456"
-            }
-        """;
+                    {
+                        "username": "integrationUser",
+                        "password": "123456"
+                    }
+                """;
 
         Response response = RestAssured
-            .given()
+                .given()
                 .contentType(ContentType.JSON)
                 .body(loginJson)
-            .when()
+                .when()
                 .post("/auth/login")
-            .then()
+                .then()
                 .statusCode(200)
                 .extract().response();
 
@@ -69,46 +72,46 @@ public class ConsortiumGroupIntegrationTest {
     @Test
     void shouldCreateConsortiumGroup() {
         String requestBody = """
-            {
-                "groupName": "Test Integration",
-                "totalValue": 10000,
-                "quotaQuantity": 10,
-                "monthQuantity": 12
-            }
-        """;
+                    {
+                        "groupName": "Test Integration",
+                        "totalValue": 10000,
+                        "quotaQuantity": 10,
+                        "monthQuantity": 12
+                    }
+                """;
 
         RestAssured
-            .given()
+                .given()
                 .header("Authorization", "Bearer " + token)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-            .when()
+                .when()
                 .post("/consortiumGroup/create")
-            .then()
+                .then()
                 .statusCode(201)
                 .body(containsString("Consortium created with success"));
     }
-    
+
     @Test
     void shouldListByID() {
         // Primeiro cria o grupo
         String requestBody = """
-            {
-                "groupName": "Test Integration",
-                "totalValue": 10000,
-                "quotaQuantity": 10,
-                "monthQuantity": 12
-            }
-        """;
+                    {
+                        "groupName": "Test Integration",
+                        "totalValue": 10000,
+                        "quotaQuantity": 10,
+                        "monthQuantity": 12
+                    }
+                """;
 
         Response response = RestAssured
-            .given()
+                .given()
                 .header("Authorization", "Bearer " + token)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-            .when()
+                .when()
                 .post("/consortiumGroup/create")
-            .then()
+                .then()
                 .statusCode(201)
                 .extract().response();
 
@@ -116,12 +119,12 @@ public class ConsortiumGroupIntegrationTest {
         long id = Long.parseLong(locationHeader.replaceAll("\\D+", ""));
 
         RestAssured
-            .given()
+                .given()
                 .header("Authorization", "Bearer " + token)
                 .contentType(ContentType.JSON)
-            .when()
+                .when()
                 .get("/consortiumGroup/" + id)
-            .then()
+                .then()
                 .statusCode(200)
                 .body("groupName", equalTo("Test Integration"));
     }

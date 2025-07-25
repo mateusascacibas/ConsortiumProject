@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.educationproject.consortium.dto.AuthRequestDTO;
 import com.educationproject.consortium.entity.User;
-import com.educationproject.consortium.exception.UserRepository;
+import com.educationproject.consortium.repository.UserRepository;
 
 @Service
 public class UserService {

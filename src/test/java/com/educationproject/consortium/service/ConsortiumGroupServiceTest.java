@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import com.educationproject.consortium.producer.ConsortiumGroupProducer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -26,6 +27,8 @@ import com.educationproject.consortium.entity.ConsortiumGroup;
 import com.educationproject.consortium.exception.ResourceNotFoundException;
 import com.educationproject.consortium.mapper.ConsortiumGroupMapper;
 import com.educationproject.consortium.repository.ConsortiumGroupRepository;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 
 public class ConsortiumGroupServiceTest {
 
@@ -34,10 +37,22 @@ public class ConsortiumGroupServiceTest {
 	
 	@Mock
 	private ConsortiumGroupRepository repository;
-	
+
+	@Mock
+	private RedisTemplate<String, ConsortiumGroup> redisTemplate;
+
+	@Mock
+	private ValueOperations<String, ConsortiumGroup> valueOperations;
+
+	@Mock
+	private ConsortiumGroupProducer producer;
+
+
 	@BeforeEach
 	void setup() {
 		MockitoAnnotations.initMocks(this);
+		service = new ConsortiumGroupService(repository, producer, redisTemplate);
+		when(redisTemplate.opsForValue()).thenReturn(valueOperations);
 	}
 	
 	@Test
