@@ -1,4 +1,4 @@
-package com.educationproject.consortium.config;
+package com.educationProject.consortium.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

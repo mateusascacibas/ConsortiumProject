@@ -1,4 +1,4 @@
-package com.educationproject.consortium.exception;
+package com.educationProject.consortium.exception;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.educationproject.consortium.entity;
+package com.educationProject.consortium.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

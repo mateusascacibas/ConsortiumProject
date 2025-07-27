@@ -1,6 +1,5 @@
-package com.educationproject.consortium.integration;
+package com.educationProject.consortium.integration;
 
-import com.educationproject.consortium.producer.ConsortiumGroupProducer;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -8,7 +7,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.annotation.DirtiesContext;
 
 import static org.hamcrest.Matchers.*;

@@ -1,20 +1,19 @@
-package com.educationproject.consortium.service;
+package com.educationProject.consortium.service;
 
 import java.time.Duration;
 import java.util.List;
 
-import com.educationproject.consortium.producer.ConsortiumGroupProducer;
+import com.educationProject.consortium.producer.ConsortiumGroupProducer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import com.educationproject.consortium.dto.ConsortiumGroupRequestDTO;
-import com.educationproject.consortium.dto.ConsortiumGroupResponseDTO;
-import com.educationproject.consortium.entity.ConsortiumGroup;
-import com.educationproject.consortium.exception.ResourceNotFoundException;
-import com.educationproject.consortium.mapper.ConsortiumGroupMapper;
-import com.educationproject.consortium.repository.ConsortiumGroupRepository;
+import com.educationProject.consortium.dto.ConsortiumGroupRequestDTO;
+import com.educationProject.consortium.dto.ConsortiumGroupResponseDTO;
+import com.educationProject.consortium.entity.ConsortiumGroup;
+import com.educationProject.consortium.exception.ResourceNotFoundException;
+import com.educationProject.consortium.mapper.ConsortiumGroupMapper;
+import com.educationProject.consortium.repository.ConsortiumGroupRepository;
 
 @Service
 public class ConsortiumGroupService {

@@ -1,4 +1,4 @@
-package com.educationproject.consortium.dto;
+package com.educationProject.consortium.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;

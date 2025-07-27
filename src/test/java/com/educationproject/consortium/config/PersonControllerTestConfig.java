@@ -1,7 +1,7 @@
-package com.educationproject.consortium.config;
+package com.educationProject.consortium.config;
 
-import com.educationproject.consortium.producer.ConsortiumGroupProducer;
-import com.educationproject.consortium.service.PersonService;
+import com.educationProject.consortium.producer.ConsortiumGroupProducer;
+import com.educationProject.consortium.service.PersonService;
 import org.mockito.Mockito;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

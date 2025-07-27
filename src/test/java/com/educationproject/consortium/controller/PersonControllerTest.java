@@ -1,10 +1,10 @@
-package com.educationproject.consortium.controller;
+package com.educationProject.consortium.controller;
 
-import com.educationproject.consortium.config.PersonControllerTestConfig;
-import com.educationproject.consortium.dto.PersonRequestDTO;
-import com.educationproject.consortium.dto.PersonResponseDTO;
-import com.educationproject.consortium.producer.ConsortiumGroupProducer;
-import com.educationproject.consortium.service.PersonService;
+import com.educationProject.consortium.config.PersonControllerTestConfig;
+import com.educationProject.consortium.dto.PersonRequestDTO;
+import com.educationProject.consortium.dto.PersonResponseDTO;
+import com.educationProject.consortium.producer.ConsortiumGroupProducer;
+import com.educationProject.consortium.service.PersonService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;

@@ -1,6 +1,6 @@
-package com.educationproject.consortium.config;
+package com.educationProject.consortium.config;
 
-import com.educationproject.consortium.util.JwtUtil;
+import com.educationProject.consortium.util.JwtUtil;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

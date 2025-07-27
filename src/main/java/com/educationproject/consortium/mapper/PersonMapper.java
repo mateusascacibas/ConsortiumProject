@@ -1,8 +1,8 @@
-package com.educationproject.consortium.mapper;
+package com.educationProject.consortium.mapper;
 
-import com.educationproject.consortium.dto.PersonRequestDTO;
-import com.educationproject.consortium.dto.PersonResponseDTO;
-import com.educationproject.consortium.entity.Person;
+import com.educationProject.consortium.dto.PersonRequestDTO;
+import com.educationProject.consortium.dto.PersonResponseDTO;
+import com.educationProject.consortium.entity.Person;
 
 public class PersonMapper {
     public static PersonResponseDTO toResponseDTO(Person person) {

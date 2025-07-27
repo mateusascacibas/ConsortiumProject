@@ -1,4 +1,4 @@
-package com.educationproject.consortium.entity;
+package com.educationProject.consortium.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

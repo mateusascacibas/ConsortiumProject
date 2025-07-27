@@ -1,6 +1,5 @@
-package com.educationproject.consortium.config;
+package com.educationProject.consortium.config;
 
-import com.educationproject.consortium.entity.ConsortiumGroup;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

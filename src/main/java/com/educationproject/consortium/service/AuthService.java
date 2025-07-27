@@ -1,12 +1,12 @@
-package com.educationproject.consortium.service;
+package com.educationProject.consortium.service;
 
 import org.springframework.stereotype.Service;
 
-import com.educationproject.consortium.dto.AuthRequestDTO;
-import com.educationproject.consortium.entity.User;
-import com.educationproject.consortium.exception.ResourceNotFoundException;
-import com.educationproject.consortium.repository.UserRepository;
-import com.educationproject.consortium.util.JwtUtil;
+import com.educationProject.consortium.dto.AuthRequestDTO;
+import com.educationProject.consortium.entity.User;
+import com.educationProject.consortium.exception.ResourceNotFoundException;
+import com.educationProject.consortium.repository.UserRepository;
+import com.educationProject.consortium.util.JwtUtil;
 
 @Service
 public class AuthService {

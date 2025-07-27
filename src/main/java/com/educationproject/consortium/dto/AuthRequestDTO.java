@@ -1,4 +1,4 @@
-package com.educationproject.consortium.dto;
+package com.educationProject.consortium.dto;
 
 public record AuthRequestDTO(String username, String password) {
 

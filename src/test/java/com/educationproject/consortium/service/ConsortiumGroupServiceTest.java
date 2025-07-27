@@ -1,4 +1,4 @@
-package com.educationproject.consortium.service;
+package com.educationProject.consortium.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -14,19 +14,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import com.educationproject.consortium.producer.ConsortiumGroupProducer;
+import com.educationProject.consortium.producer.ConsortiumGroupProducer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.educationproject.consortium.dto.ConsortiumGroupRequestDTO;
-import com.educationproject.consortium.dto.ConsortiumGroupResponseDTO;
-import com.educationproject.consortium.entity.ConsortiumGroup;
-import com.educationproject.consortium.exception.ResourceNotFoundException;
-import com.educationproject.consortium.mapper.ConsortiumGroupMapper;
-import com.educationproject.consortium.repository.ConsortiumGroupRepository;
+import com.educationProject.consortium.dto.ConsortiumGroupRequestDTO;
+import com.educationProject.consortium.dto.ConsortiumGroupResponseDTO;
+import com.educationProject.consortium.entity.ConsortiumGroup;
+import com.educationProject.consortium.exception.ResourceNotFoundException;
+import com.educationProject.consortium.mapper.ConsortiumGroupMapper;
+import com.educationProject.consortium.repository.ConsortiumGroupRepository;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 
@@ -39,10 +39,10 @@ public class ConsortiumGroupServiceTest {
 	private ConsortiumGroupRepository repository;
 
 	@Mock
-	private RedisTemplate<String, ConsortiumGroup> redisTemplate;
+	private RedisTemplate<String, Object> redisTemplate;
 
 	@Mock
-	private ValueOperations<String, ConsortiumGroup> valueOperations;
+	private ValueOperations<String, Object> valueOperations;
 
 	@Mock
 	private ConsortiumGroupProducer producer;

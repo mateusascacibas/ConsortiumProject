@@ -1,4 +1,4 @@
-package com.educationproject.consortium.exception;
+package com.educationProject.consortium.exception;
 
 public class ResourceNotFoundException extends RuntimeException{
 	public ResourceNotFoundException(String message) {

@@ -1,8 +1,8 @@
-package com.educationproject.consortium.mapper;
+package com.educationProject.consortium.mapper;
 
-import com.educationproject.consortium.dto.ConsortiumGroupRequestDTO;
-import com.educationproject.consortium.dto.ConsortiumGroupResponseDTO;
-import com.educationproject.consortium.entity.ConsortiumGroup;
+import com.educationProject.consortium.dto.ConsortiumGroupRequestDTO;
+import com.educationProject.consortium.dto.ConsortiumGroupResponseDTO;
+import com.educationProject.consortium.entity.ConsortiumGroup;
 
 public class ConsortiumGroupMapper {
 	public static ConsortiumGroupResponseDTO toDTO(ConsortiumGroup entity) {

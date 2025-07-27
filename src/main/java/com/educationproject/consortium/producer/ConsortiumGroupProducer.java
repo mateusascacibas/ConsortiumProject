@@ -1,10 +1,10 @@
-package com.educationproject.consortium.producer;
+package com.educationProject.consortium.producer;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import static com.educationproject.consortium.config.RabbitMQConfig.*;
+import static com.educationProject.consortium.config.RabbitMQConfig.*;
 
 @Service
 public class ConsortiumGroupProducer {

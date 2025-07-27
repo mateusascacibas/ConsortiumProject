@@ -1,4 +1,4 @@
-package com.educationproject.consortium.util;
+package com.educationProject.consortium.util;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

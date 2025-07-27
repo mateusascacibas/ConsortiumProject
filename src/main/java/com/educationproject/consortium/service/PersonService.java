@@ -1,15 +1,15 @@
-package com.educationproject.consortium.service;
+package com.educationProject.consortium.service;
 
 import java.util.List;
 
-import com.educationproject.consortium.dto.PersonRequestDTO;
-import com.educationproject.consortium.dto.PersonResponseDTO;
-import com.educationproject.consortium.exception.PersonNotFoundException;
-import com.educationproject.consortium.mapper.PersonMapper;
+import com.educationProject.consortium.dto.PersonRequestDTO;
+import com.educationProject.consortium.dto.PersonResponseDTO;
+import com.educationProject.consortium.exception.PersonNotFoundException;
+import com.educationProject.consortium.mapper.PersonMapper;
 import org.springframework.stereotype.Service;
 
-import com.educationproject.consortium.entity.Person;
-import com.educationproject.consortium.repository.PersonRepository;
+import com.educationProject.consortium.entity.Person;
+import com.educationProject.consortium.repository.PersonRepository;
 
 @Service
 public class PersonService {

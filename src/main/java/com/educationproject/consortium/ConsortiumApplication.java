@@ -1,4 +1,4 @@
-package com.educationproject.consortium;
+package com.educationProject.consortium;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

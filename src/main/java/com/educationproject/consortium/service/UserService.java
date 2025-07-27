@@ -1,12 +1,12 @@
-package com.educationproject.consortium.service;
+package com.educationProject.consortium.service;
 
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.educationproject.consortium.dto.AuthRequestDTO;
-import com.educationproject.consortium.entity.User;
-import com.educationproject.consortium.repository.UserRepository;
+import com.educationProject.consortium.dto.AuthRequestDTO;
+import com.educationProject.consortium.entity.User;
+import com.educationProject.consortium.repository.UserRepository;
 
 @Service
 public class UserService {

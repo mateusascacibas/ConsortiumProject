@@ -1,4 +1,4 @@
-package com.educationproject.consortium.exception;
+package com.educationProject.consortium.exception;
 
 public class PersonNotFoundException extends RuntimeException{
     public PersonNotFoundException(String id) {

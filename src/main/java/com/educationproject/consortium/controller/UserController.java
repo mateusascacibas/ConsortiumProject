@@ -1,4 +1,4 @@
-package com.educationproject.consortium.controller;
+package com.educationProject.consortium.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.educationproject.consortium.dto.AuthRequestDTO;
-import com.educationproject.consortium.service.UserService;
+import com.educationProject.consortium.dto.AuthRequestDTO;
+import com.educationProject.consortium.service.UserService;
 
 @RestController
 @RequestMapping("/user")

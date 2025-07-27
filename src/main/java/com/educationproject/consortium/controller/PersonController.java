@@ -1,17 +1,16 @@
-package com.educationproject.consortium.controller;
+package com.educationProject.consortium.controller;
 
 import java.net.URI;
 import java.util.List;
 
-import com.educationproject.consortium.dto.PersonRequestDTO;
-import com.educationproject.consortium.dto.PersonResponseDTO;
+import com.educationProject.consortium.dto.PersonRequestDTO;
+import com.educationProject.consortium.dto.PersonResponseDTO;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.educationproject.consortium.entity.Person;
-import com.educationproject.consortium.service.PersonService;
+import com.educationProject.consortium.service.PersonService;
 
 @RestController
 @RequestMapping("/person")

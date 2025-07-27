@@ -1,4 +1,4 @@
-package com.educationproject.consortium.config;
+package com.educationProject.consortium.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

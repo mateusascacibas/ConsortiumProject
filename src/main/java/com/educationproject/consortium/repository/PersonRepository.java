@@ -1,10 +1,9 @@
-package com.educationproject.consortium.repository;
+package com.educationProject.consortium.repository;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.educationproject.consortium.entity.Person;
+import com.educationProject.consortium.entity.Person;
 import org.springframework.data.mongodb.repository.Query;
-import org.springframework.security.core.parameters.P;
 
 import java.util.List;
 

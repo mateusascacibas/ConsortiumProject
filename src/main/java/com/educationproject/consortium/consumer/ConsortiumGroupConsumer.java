@@ -1,9 +1,9 @@
-package com.educationproject.consortium.consumer;
+package com.educationProject.consortium.consumer;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import static com.educationproject.consortium.config.RabbitMQConfig.QUEUE_NAME;
+import static com.educationProject.consortium.config.RabbitMQConfig.QUEUE_NAME;
 
 @Component
 public class ConsortiumGroupConsumer {

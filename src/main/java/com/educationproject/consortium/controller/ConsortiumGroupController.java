@@ -1,4 +1,4 @@
-package com.educationproject.consortium.controller;
+package com.educationProject.consortium.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.educationproject.consortium.dto.ConsortiumGroupRequestDTO;
-import com.educationproject.consortium.dto.ConsortiumGroupResponseDTO;
-import com.educationproject.consortium.service.ConsortiumGroupService;
+import com.educationProject.consortium.dto.ConsortiumGroupRequestDTO;
+import com.educationProject.consortium.dto.ConsortiumGroupResponseDTO;
+import com.educationProject.consortium.service.ConsortiumGroupService;
 
 import io.swagger.v3.oas.annotations.Operation;
 
